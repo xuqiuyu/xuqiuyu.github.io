@@ -155,7 +155,7 @@ layout: default
                             {% endif %}
                             {% if site.weibo_username %}
                             <li>
-                                <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
+                                <a target="_blank" href="http://weibo.com/u/{{ site.weibo_username }}">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
@@ -191,12 +191,12 @@ layout: default
                     </div>
                 </section>
                 <!-- Friends Blog -->
-                {% if site.friends %}
+                {% if site.links %}
                 <hr>
-                <h5>FRIENDS</h5>
+                <h5>LINKS</h5>
                 <ul class="list-inline">
-                    {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                    {% for link in site.links %}
+                        <li><a href="{{link.href}}" target="_blank">{{link.title}}</a></li>
                     {% endfor %}
                 </ul>
                 {% endif %}
